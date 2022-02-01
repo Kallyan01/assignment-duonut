@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="data.js"></script>
+    <title>Hello, world!</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light top-nav-collapse"
+        style="background-color: #fff !important; position: fixed;">
+        <div class="container">
+            <a class="navbar-brand logo-image" href="/"><img src="logo.svg" alt="alternative"></a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse navbar-collapse offcanvas-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item" style="margin-right: 10px;">
+                        <a class="nav-link page-scroll" href="#">What is Duonut?</a>
+                    </li>
+                    <li class="nav-item" style="margin-right: 10px;">
+                        <a class="nav-link page-scroll" href="#">My Duonuts</a>
+                    </li>
+                </ul>
+                <div class="dropdown">
+                    <span class="profile_outer">
+                        <span class="profile_inner">KS</span>
+                    </span>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a class="dropdown-item" href="#">My Business Pages</a>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <h1>HI</h1>
+    <div id="card" onclick=show(this)>
+        <img src="logo.svg" alt="hi">
+        <label for="quiz" style="color: var(--blue);">Quiz</label>
+    </div>
+    <div id="prev">
+
+    </div>
+
+    <div id="list">
+        
+    </div>
+    <script>
+        let prev = document.getElementById('prev')
+        let list = document.getElementById('list')
+        console.log(card_data)
+        card_data.forEach((data) => {
+            var card = document.createElement("div");
+            var image = document.createElement("div");
+            var title = document.createElement("h3");
+            image.innerHTML=`<img src=${data.img_url} alt="hi">`
+            title.innerHTML=`<h3>${data.name}</h3>`
+            card.appendChild(image);
+            card.appendChild(title);
+            list.appendChild(card);
+            card.setAttribute("onClick", "show(this)");
+        })
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    
+
+</body>
+
+</html>

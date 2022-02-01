@@ -1,0 +1,13 @@
+.navbar-brand
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-menu
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+}

@@ -44,18 +44,17 @@
             </div>
         </div>
     </nav>
-    <h1>HI</h1>
-    <div id="card" onclick=show(this)>
-        <img src="logo.svg" alt="hi">
-        <label for="quiz" style="color: var(--blue);">Quiz</label>
-    </div>
-    <div id="prev">
+    <div class="opt-container">
+        <div id="list">
+
+        </div>
+        <div id="prev">
+
+        </div>
+
 
     </div>
 
-    <div id="list">
-        
-    </div>
     <script>
         let prev = document.getElementById('prev') //the place where we want to show the prev option
         let list = document.getElementById('list') // list of options
@@ -64,10 +63,17 @@
             var card = document.createElement("div");
             var image = document.createElement("div");
             var title = document.createElement("h3");
-            image.innerHTML=`<img src=${data.img_url} alt="hi">`
-            title.innerHTML=`<h3>${data.name}</h3>`
+            var url = document.createElement("div");
+            card.classList.add('card')
+            image.classList.add('card-image')
+            title.classList.add('card-title')
+            url.classList.add('card-url')
+            image.innerHTML = `<img src=${data.img_url} alt="hi">`
+            title.innerHTML = `${data.name}`
+            url.innerHTML = `<a href=${data.url}><button>Select</button></a>`
             card.appendChild(image);
             card.appendChild(title);
+            card.appendChild(url)
             list.appendChild(card);
             card.setAttribute("onClick", "show(this)");
         })
@@ -83,7 +89,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+
 
 </body>
 

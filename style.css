@@ -59,6 +59,7 @@ height: 100%;
 display: grid;
 place-items: center;
 position: relative;
+padding: 20px 0px;
 }
 .prev-cont::after
 {

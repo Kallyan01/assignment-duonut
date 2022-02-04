@@ -1,68 +1,50 @@
-*
-{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-body
-{
-    background: linear-gradient(45deg,#770bcf,#da46ff);
+
+body {
+    background: linear-gradient(45deg, #770bcf, #da46ff);
 }
-#prev a
-{
+
+#prev a {
     text-decoration: none;
 }
-.navbar-brand
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.navbar-menu
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--blue);
-}
-.list-txt,.prev-txt
-{
-    text-align: center;
-}
-.opt-container
-{
+
+.opt-container {
     height: auto;
     width: 90vw;
     background-color: #fff;
     /* overflow: hidden; */
     margin: 70px auto;
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
     /* padding: 30px; */
     position: relative;
     border-radius: 10px;
-    overflow:hidden;
+    overflow: hidden;
 }
-.list-cont
-{
-width: 60%;
-height: 100%;
-display: grid;
-place-items: center;
-position: relative;
-padding: 20px 0px;
+
+.list-cont {
+    width: 60%;
+    height: 100%;
+    /* display: grid;
+place-items: center; */
+    position: relative;
+    padding: 20px 0px;
 }
-.prev-cont
-{
-width: 40%;
-height: 100%;
-display: grid;
-place-items: center;
-position: relative;
-padding: 20px 0px;
+
+.prev-cont {
+    width: 40%;
+    height: 100%;
+    /* display: grid;
+place-items: center; */
+    position: relative;
+    padding: 20px 0px;
 }
-.prev-cont::after
-{
+
+.prev-cont::after {
     position: absolute;
     content: '';
     top: 0;
@@ -71,38 +53,42 @@ padding: 20px 0px;
     width: .01em;
     background-color: rgb(156, 156, 156);
 }
-#list
-{
+
+.list-txt,
+.prev-txt {
+    text-align: center;
+}
+
+#list {
     /* background-color:coral; */
     height: 100%;
     width: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
     padding: 30px 0;
 }
-#prev
-{
+
+#prev {
     /* background-color: darkgreen; */
     height: 100%;
     width: 100%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    flex-direction: column;
+    flex-direction: column; */
     position: relative;
     padding: 30px;
 }
 
-#prev button
-{
+#prev button {
     display: block;
     padding: 5px 130px;
     border: none;
     outline: none;
-    background: linear-gradient(45deg,#770bcf,#da46ff);
+    background: linear-gradient(45deg, #770bcf, #da46ff);
     color: #fff;
     border: none;
     border-radius: 0px;
@@ -112,14 +98,14 @@ padding: 20px 0px;
     box-shadow: 2px 2px 5px .1px #770bcf;
     border-radius: 20px;
 }
-#prev button:hover
-{
-    background: linear-gradient(60deg,#ffaa0b,#ffe346);
+
+#prev button:hover {
+    background: linear-gradient(60deg, #ffaa0b, #ffe346);
     color: #000;
     box-shadow: 2px 2px 5px 1px rgb(255, 196, 1);
 }
-.card
-{
+
+.card {
     margin: 5px;
     display: flex;
     flex-direction: column;
@@ -129,41 +115,38 @@ padding: 20px 0px;
     padding: 10px;
     position: relative;
 }
-.active
-{
+
+.active {
     position: relative;
     border: 1px solid blueviolet;
 }
 
-.card img
-{
+.card img {
     height: 150px;
     width: 150px;
-    
 }
-#prev img
-{
+
+#prev img {
     height: 150px;
     width: 150px;
-    
 }
-#list .card-title
-{
+
+#list .card-title {
     display: none;
 }
-#list .card:hover::after
-{
-position: absolute;
-content: '';
-bottom: 0;
-left: 0;
-width: 100%;
-height: 5vh;
-background: linear-gradient(45deg,#770bcf,#da46ff);
-opacity: .8;
+
+#list .card:hover::after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5vh;
+    background: linear-gradient(45deg, #770bcf, #da46ff);
+    opacity: .8;
 }
-#list .card:hover .card-title
-{
+
+#list .card:hover .card-title {
     display: block;
     position: absolute;
     bottom: -12px;
@@ -177,62 +160,56 @@ opacity: .8;
     z-index: 100;
     color: #fff;
 }
-#list .card-url
-{
+
+#list .card-url {
     display: none;
 }
-#list a
-{
+
+#list a {
     text-decoration: none;
 }
-#list .card-url button
-{
+
+#list .card-url button {
     padding: 5px 50px;
     border: none;
     outline: none;
-    background: linear-gradient(45deg,#770bcf,#da46ff);
+    background: linear-gradient(45deg, #770bcf, #da46ff);
     color: #fff;
     margin: 5px;
     display: none;
 }
-.navbar-toggler
-{
+
+.navbar-toggler {
     border: none;
     outline: none;
 }
-@media screen and (max-width:1090px)
-{
-.list-txt h3,.prev-txt h3
-{
-font-size: 1.3em;
-}
-}
-@media screen and (max-width:850px)
-{
-    .active
-{
-    position: relative;
-    border: none;
-    /* background-color: rgb(255, 191, 14); */
-    background: linear-gradient(45deg,#ffaa0b,#ffe346);
-}
-    .opt-container
-{
-    height: auto;
-}
-    .card
-{
-    width: 100%;
-    height: auto;
-}
-    #list .card:hover::after
-    {
-   display: none;
+
+@media screen and (max-width:1090px) {
+    .list-txt h3,
+    .prev-txt h3 {
+        font-size: 1.3em;
     }
-    #list .card:hover .card-title
-    {
+}
+
+@media screen and (max-width:850px) {
+    .active {
+        position: relative;
+        border: none;
+        background: linear-gradient(45deg, #ffaa0b, #ffe346);
+    }
+    .opt-container {
+        height: auto;
+    }
+    #list .card {
+        width: 100%;
+        height: auto;
+    }
+    #list .card:hover::after {
+        display: none;
+    }
+    #list .card:hover .card-title {
         display: block;
-        position:static;
+        position: static;
         bottom: 0;
         left: 0;
         right: 0;
@@ -245,40 +222,28 @@ font-size: 1.3em;
         z-index: 100;
         color: #000;
     }
-    #list .card-title
-{
-    display: flex;
-    font-size: .8em;
+    #list .card-title {
+        display: flex;
+        font-size: .8em;
+    }
+    #list .card-url {
+        /* background-color: darkgreen; */
+        display: grid;
+        place-items: center;
+        /* display: none; */
+    }
+    .list-cont {
+        width: 100%;
+    }
+    .prev-cont {
+        display: none !important;
+    }
+    #list .card-url button {
+        display: block;
+    }
+    #list {
+        /* background-color:coral; */
+        height: 100%;
+        width: 100%;
+    }
 }
-   #list .card-url
-{
-    /* background-color: darkgreen; */
-    display: grid;
-    place-items: center;
-    /* display: none; */
-}
-.list-cont
-{
-width: 100%;
-}
-.prev-cont
-{
-    display: none;
-} 
-#list .card-url button
-{
-    display: block;
-}
-#list
-{
-    /* background-color:coral; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-}
-

@@ -12,11 +12,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
     <script src="data.js"></script>
-    <title>Dounut</title>
+    <title>Duonut</title>
 </head>
 
 <body>
-    <div class="container-fluid bg-warning ">
+    <div class="container-fluid " style="background: linear-gradient(45deg,#ffaa0b,#ffe346);position: fixed;top: 0; z-index: 100;">
         <nav class="navbar navbar-expand-lg navbar-light ">
             <a class="navbar-brand logo-image" href="/"><img src="logo.svg" alt="alternative"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -50,16 +50,28 @@
             </div>
         </nav>
     </div>
-    <div class="opt-container">
-        <div id="list"></div>
-        <div id="prev"></div>
-    </div>
+        <div class="opt-container">
+            <div class="list-cont">
+                <div class="list-txt">
+                    <h3>Select Type of Activity</h3>
+                    <p>Link your activities and quizes & share it instantly!</p>
+                </div>
+                <div id="list"></div>
+            </div>
+            <!-- <div class="divider"></div> -->
+            <div class="prev-cont">
+                <div class="prev-txt">
+                    <h3>WELCOME TO CREATOR ZONE!</h3>
+                </div>
+                <div id="prev"></div>
+            </div>
+        </div>
 
     <script>
         let list_child = document.getElementsByClassName('card')
         let prev = document.getElementById('prev') //the place where we want to show the prev option
         let list = document.getElementById('list') // list of options
-        console.log(card_data)
+        // console.log(card_data)
         card_data.map((data, idx) => {
             var card = document.createElement("div");
             var image = document.createElement("div");
@@ -71,7 +83,7 @@
             url.classList.add('card-url')
             image.innerHTML = `<img src=${data.img_url} alt="hi">`
             title.innerHTML = `${data.name}`
-            url.innerHTML = `<a href=${data.url}><button>Select</button></a>`
+            url.innerHTML = `<a href=${data.url}><button type="button" class="btn btn-outline-danger">Select</button></a>`
             card.appendChild(image);
             card.appendChild(title);
             card.appendChild(url)

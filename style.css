@@ -6,7 +6,7 @@
 }
 body
 {
- background-color: blueviolet;   
+    background: linear-gradient(45deg,#770bcf,#da46ff);
 }
 #prev a
 {
@@ -25,6 +25,10 @@ body
     align-items: center;
     color: var(--blue);
 }
+.list-txt,.prev-txt
+{
+    text-align: center;
+}
 .opt-container
 {
     height: auto;
@@ -35,12 +39,42 @@ body
     display: flex;
     flex-direction: row;
     /* padding: 30px; */
+    position: relative;
+    border-radius: 10px;
+    overflow:hidden;
+}
+.list-cont
+{
+width: 60%;
+height: 100%;
+display: grid;
+place-items: center;
+position: relative;
+padding: 20px 0px;
+}
+.prev-cont
+{
+width: 40%;
+height: 100%;
+display: grid;
+place-items: center;
+position: relative;
+}
+.prev-cont::after
+{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    height: 140%;
+    width: .01em;
+    background-color: rgb(156, 156, 156);
 }
 #list
 {
     /* background-color:coral; */
     height: 100%;
-    width: 60%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,32 +85,37 @@ body
 {
     /* background-color: darkgreen; */
     height: 100%;
-    width: 40%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
     flex-direction: column;
-    border-left: .02em solid gray;
+    position: relative;
     padding: 30px;
 }
+
 #prev button
 {
     display: block;
     padding: 5px 130px;
     border: none;
     outline: none;
-    background-color: darkorchid;
+    background: linear-gradient(45deg,#770bcf,#da46ff);
     color: #fff;
     border: none;
     border-radius: 0px;
-    margin: 5px;
+    margin: 50px 0;
     cursor: pointer;
+    width: 100%;
+    box-shadow: 2px 2px 5px .1px #770bcf;
+    border-radius: 20px;
 }
 #prev button:hover
 {
-    background-color: rgb(255, 191, 14);
+    background: linear-gradient(60deg,#ffaa0b,#ffe346);
     color: #000;
+    box-shadow: 2px 2px 5px 1px rgb(255, 196, 1);
 }
 .card
 {
@@ -87,14 +126,14 @@ body
     align-items: center;
     outline: none;
     padding: 10px;
-    /* border: none; */
-    /* border: 2px solid rgb(65, 13, 133); */
+    position: relative;
 }
 .active
 {
     position: relative;
-    border: 1px solid red;
+    border: 1px solid blueviolet;
 }
+
 .card img
 {
     height: 150px;
@@ -111,21 +150,47 @@ body
 {
     display: none;
 }
-.card-url
+#list .card:hover::after
 {
-    /* background-color: darkgreen; */
-    display: grid;
-    place-items: center;
+position: absolute;
+content: '';
+bottom: 0;
+left: 0;
+width: 100%;
+height: 5vh;
+background: linear-gradient(45deg,#770bcf,#da46ff);
+opacity: .8;
 }
-.card-url button
+#list .card:hover .card-title
+{
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: .8em;
+    z-index: 100;
+    color: #fff;
+}
+#list .card-url
+{
+    display: none;
+}
+#list a
+{
+    text-decoration: none;
+}
+#list .card-url button
 {
     padding: 5px 50px;
     border: none;
     outline: none;
-    background-color: darkorchid;
+    background: linear-gradient(45deg,#770bcf,#da46ff);
     color: #fff;
-    border: 2px solid rgb(255, 182, 25);
-    /* border-radius: 20px; */
     margin: 5px;
     display: none;
 }
@@ -134,13 +199,72 @@ body
     border: none;
     outline: none;
 }
+@media screen and (max-width:1090px)
+{
+.list-txt h3,.prev-txt h3
+{
+font-size: 1.3em;
+}
+}
 @media screen and (max-width:850px)
 {
-#prev
+    .active
+{
+    position: relative;
+    border: none;
+    /* background-color: rgb(255, 191, 14); */
+    background: linear-gradient(45deg,#ffaa0b,#ffe346);
+}
+    .opt-container
+{
+    height: auto;
+}
+    .card
+{
+    width: 100%;
+    height: auto;
+}
+    #list .card:hover::after
+    {
+   display: none;
+    }
+    #list .card:hover .card-title
+    {
+        display: block;
+        position:static;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        /* background-color: red; */
+        padding: 0px;
+        text-align: center;
+        font-size: .9em;
+        z-index: 100;
+        color: #000;
+    }
+    #list .card-title
+{
+    display: flex;
+    font-size: .8em;
+}
+   #list .card-url
+{
+    /* background-color: darkgreen; */
+    display: grid;
+    place-items: center;
+    /* display: none; */
+}
+.list-cont
+{
+width: 100%;
+}
+.prev-cont
 {
     display: none;
-}    
-.card-url button
+} 
+#list .card-url button
 {
     display: block;
 }

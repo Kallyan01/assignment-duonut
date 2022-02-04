@@ -11,32 +11,32 @@ let card_data=[
     },
     {
         name: 'Code Editor',
-        img_url: 'demo.png',
+        img_url: 'codeeditor.png',
         url: '/ce'
     },
     {
         name: 'Custom Layout',
-        img_url: 'demo.png',
+        img_url: 'custom-layout.png',
         url: '/cl'
     },
     {
         name: 'Type Writer',
-        img_url: 'demo.png',
+        img_url: 'typewriter.jpg',
         url: '/tw'
     },
     {
         name: 'Analystics Layout',
-        img_url: 'demo.png',
+        img_url: 'analy.webp',
         url: '/al'
     },
     {
         name: 'Action',
-        img_url: 'demo.png',
+        img_url: 'action.webp',
         url: '/action'
     },
     {
-        name: 'Live',
-        img_url: 'demo.png',
+        name: 'Math',
+        img_url: 'math.webp',
         url: '/live'
     },
 ]
